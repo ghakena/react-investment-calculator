@@ -1,6 +1,8 @@
+import { useState } from "react";
+
 import Header from "./components/Header.jsx";
 import UserInput from "./components/UserInput.jsx";
-import { useState } from "react";
+import Results from "./components/Results.jsx";
 
 function App() {
   // to get and store values entered by the user
@@ -25,7 +27,7 @@ function App() {
     <>
       <Header />
       <UserInput onChange={handleChange} userInput={userInput} />
-      {/* Results go here */}
+      <Results input={userInput} />
     </>
   )
 }
